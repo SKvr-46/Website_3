@@ -1,0 +1,10 @@
+$cblack: rgba(34,40,49,1);
+$cgray: rgba(57,62,70,1);
+$corange: rgba(253,112,19,1);
+$cwhite: rgba(238,238,238,1);
+
+.foot {
+    margin-top: 10px;
+    border-top: solid 1px $cblack;
+    text-align: center;
+}

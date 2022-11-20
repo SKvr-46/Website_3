@@ -1,0 +1,75 @@
+$cblack: rgba(34,40,49,1);
+$cgray: rgba(57,62,70,1);
+$corange: rgba(253,112,19,1);
+$cwhite: rgba(238,238,238,1);
+
+
+.links {
+    width: 47%;
+
+    & .linkwrapper {
+        background-color: $cwhite;
+        border: 5px solid rgb(31, 26, 26);
+        border-radius: 15px;
+        margin: 0 auto;
+        overflow: hidden;
+        height: auto;
+        width: 100%;
+        margin-top: 5px;
+
+        & .linktitle {
+            font-size: 30px;
+            margin-top: 10px;
+            margin-left: 20px;
+            font-weight: 600;
+            width: auto;
+        
+        }
+
+        & .weblinks {
+            border-radius: 15px;
+            list-style: none;
+
+            & a::before {
+                content: "● ";
+                color: $cblack;
+
+            }
+
+            & .weblink {
+                position: relative;
+                font-size: 25px;
+                color: $cgray;
+                text-decoration: none;
+                display: inline-block;
+                transition: .3s;
+
+                &::after{ //参考資料あり
+                    position: absolute;
+                    bottom: 0;
+                    left: 50%;
+                    content: '';
+                    width: 0;
+                    height: 2px;
+                    background-color: $corange;
+                    transition: .3s;
+                    transform: translateX(-50%);
+                }
+
+                &:hover::after{
+                    width: 100%;
+                }
+
+                
+
+                &:hover:before{
+                    transition: all 0.4s;
+                    color: $corange;
+                }
+
+            
+            }
+        }
+    }
+}
+

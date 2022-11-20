@@ -1,0 +1,55 @@
+@charset "UTF-8";
+.links {
+  width: 47%;
+}
+.links .linkwrapper {
+  background-color: rgb(238, 238, 238);
+  border: 5px solid rgb(31, 26, 26);
+  border-radius: 15px;
+  margin: 0 auto;
+  overflow: hidden;
+  height: auto;
+  width: 100%;
+  margin-top: 5px;
+}
+.links .linkwrapper .linktitle {
+  font-size: 30px;
+  margin-top: 10px;
+  margin-left: 20px;
+  font-weight: 600;
+  width: auto;
+}
+.links .linkwrapper .weblinks {
+  border-radius: 15px;
+  list-style: none;
+}
+.links .linkwrapper .weblinks a::before {
+  content: "● ";
+  color: rgb(34, 40, 49);
+}
+.links .linkwrapper .weblinks .weblink {
+  position: relative;
+  font-size: 25px;
+  color: rgb(57, 62, 70);
+  text-decoration: none;
+  display: inline-block;
+  transition: 0.3s;
+}
+.links .linkwrapper .weblinks .weblink::after {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  content: "";
+  width: 0;
+  height: 2px;
+  background-color: rgb(253, 112, 19);
+  transition: 0.3s;
+  transform: translateX(-50%);
+}
+.links .linkwrapper .weblinks .weblink:hover::after {
+  width: 100%;
+}
+.links .linkwrapper .weblinks .weblink:hover:before {
+  transition: all 0.4s;
+  color: rgb(253, 112, 19);
+}/*# sourceMappingURL=Link_container.css.map */

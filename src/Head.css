@@ -1,0 +1,125 @@
+@-webkit-keyframes bggradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+@keyframes bggradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+.menuarea {
+  display: flex;
+  flex-direction: column;
+  background: rgb(57, 62, 70);
+  color: rgb(238, 238, 238);
+  margin-left: 10px;
+  width: 200px;
+  height: 200px;
+  font-size: 20px;
+  justify-content: space-around;
+  opacity: 0.8;
+}
+.menuarea:hover {
+  cursor: pointer;
+}
+.menuarea a {
+  position: relative;
+  display: inline-block;
+  transition: 0.3s;
+}
+.menuarea a::after {
+  position: absolute;
+  bottom: 0;
+  left: 0%;
+  content: "";
+  width: 0px;
+  height: 2px;
+  background-color: rgb(253, 112, 19);
+  transition: 0.3s;
+}
+.menuarea a:hover::after {
+  width: 90%;
+}
+
+.head .head2 {
+  height: 800px;
+  position: relative;
+  width: 100%;
+  margin: 0 auto;
+  background: linear-gradient(-45deg, rgb(57, 62, 70), rgb(253, 112, 19) 50%, rgb(57, 62, 70));
+  background-size: 200% 200%;
+  -webkit-animation: bggradient 7s ease-in-out infinite;
+          animation: bggradient 7s ease-in-out infinite;
+  overflow: hidden;
+}
+.head .head2 .menu_button {
+  position: relative;
+  text-align: center;
+  display: inline-block;
+  transform-style: preserve-3d;
+  perspective: 300px;
+  perspective-origin: 50% 50%;
+  width: 50px;
+  height: 50px;
+  margin-top: 10px;
+  margin-left: 10px;
+  cursor: pointer;
+}
+.head .head2 .menu_button span {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 1px solid rgb(34, 40, 49);
+  line-height: 48px;
+  text-align: center;
+  transition: all 0.3s;
+}
+.head .head2 .menu_button .hovering {
+  background-color: rgb(34, 40, 49);
+  color: rgb(238, 238, 238);
+  transform: rotateX(90deg);
+  transform-origin: center center -25px;
+}
+.head .head2 .menu_button .default {
+  background-color: rgb(34, 40, 49);
+  color: rgb(238, 238, 238);
+  transform: rotateX(0deg);
+  transform-origin: center center -25px;
+  font-size: 50px;
+  opacity: 0.8;
+}
+.head .head2 .menu_button:hover .hovering {
+  transform: rotateX(0deg);
+}
+.head .head2 .menu_button:hover .default {
+  transform: rotateX(-90deg);
+}
+.head .head2 .isOpen {
+  display: block;
+}
+.head .head2 .isClose {
+  display: none;
+}
+.head .head2 .top_picture {
+  position: absolute;
+  top: 20px;
+  left: 40%;
+  width: 400px;
+  height: 300px;
+  background: rgb(34, 40, 49);
+}/*# sourceMappingURL=Head.css.map */
